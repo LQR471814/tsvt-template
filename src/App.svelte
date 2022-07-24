@@ -1,5 +1,10 @@
+<script lang="ts">
+    //@ts-ignore
+    const production = import.meta.env.PROD
+</script>
+
 <main class="flex h-full w-full">
-    <h1 class="font-semibold inline m-auto">Hello world!</h1>
+    <h1 class="font-semibold inline m-auto">Hello {production ? "production" : "world"}!</h1>
 </main>
 
 <style>
