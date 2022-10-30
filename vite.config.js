@@ -4,6 +4,9 @@ import sveltePreprocess from 'svelte-preprocess';
 
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 
+import tailwindcss from "tailwindcss"
+import autoprefixer from "autoprefixer"
+
 export default defineConfig(({ mode }) => {
   return {
     root: "src",
@@ -23,8 +26,8 @@ export default defineConfig(({ mode }) => {
           sourceMap: mode !== "build",
           postcss: {
             plugins: [
-              require('tailwindcss')(),
-              require('autoprefixer')(),
+              tailwindcss(),
+              autoprefixer(),
             ],
           },
         }),
